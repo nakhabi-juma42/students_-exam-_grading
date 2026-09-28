@@ -13,7 +13,7 @@ def get_valid_marks (subject):
            print ("please enter a number")
       marks = float( input(f"enter {subject} marks: ")) 
       return marks
-
+subject={}
 while True:
     subject_name = input ("enter subject name (or type 'done' to finish: ").title()
     if subject_name == 'Done':
@@ -23,10 +23,14 @@ while True:
        subjects[subject_name]= marks
     
 
-
-total= sum(subjects.values())
-average = subject/len (subjects)
-print("\n___STUDENT MARKS")
+if not subjects:
+   print("no subject was entered ")
+else: 
+    total= sum(subjects.values())
+    average = subject/len (subjects)
+print("\n" + "=" * 35)
+print(". STUDENT RESULTS")
+print("=" * 35)
 for subject,marks in student.items():
   print (f"{subject} : {marks}")
 
@@ -39,17 +43,19 @@ elif average >= 60:
 elif average >= 50: 
    grade= D
 else:
-   grade= E
-print (f"Grade:{grade})
+   grade= E 
+
 if average >= 50:
     status= "PASS"
 else:
     status= "FAIL"
-print(f"Status: {status}")
+
 
 print ("\n___Student Results ___)
 print (f"Name: {name}")
 print (f"Total marks: {total})
 print (f"Average: {average:.2f}
+print (f"Grade:{grade})
+print (f"Status: {status}")
 
-
+print("=" * 35)

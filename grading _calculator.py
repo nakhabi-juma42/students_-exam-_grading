@@ -41,7 +41,7 @@ else:
    grade= E 
 
 print("\n" + "=" * 35)
-print(". STUDENT RESULTS")
+print("  STUDENT RESULTS")
 print("=" * 35)
 
 if average >= 50:

@@ -1,10 +1,20 @@
 print("student analyzer calculator")
 name =input ("Enter the student's name: ).title()
-marks= float(input("enter student's marks: ))
 
-Physics= float(input("enter physics marks: ))
-Chemistry= float( input( "enter chemistry marks: ))
-Biology= float(input("entry biology marks: ))
+
+def get_valid_marks (subject):
+  marks = float(input (f" enter {subject} marks: "))
+  
+  while marks < 0 or marks > 100:
+      print ("invalid marks!! enter a value between 0 and 100")
+      marks = float( input(f"enter {subject} marks: ")) 
+      return marks
+
+
+Physics= get_valid_ marks("physics")
+
+Chemistry= get_ valid_ marks(" chemistry ")
+Biology= get_valid_ marks("Biology")
 
 subjects =[Physics, Chemistry, Biology]
 # subject.append()
@@ -12,16 +22,27 @@ subjects =[Physics, Chemistry, Biology]
 total= 0 
 for subject in subjects:
    total+= subject 
-average = subject/3
+average = subject/len (subjects)
 
 if average >= 80:
-  print ("Kudos {name}! you got A")
+   grade= A
 elif average >= 70:
-  print ("{name} you got B")
+   grade= B
 elif average >= 60:
-  print ("{name} you got C")
+   grade= C
 elif average >= 50: 
-  print ({name} you got D")
+   grade= D
 else:
-  print ({name} you can do better,you got E)
+   grade= E
+print (f"Grade:{grade})
+if average >= 50:
+    status= "PASS"
+else:
+    status= "FAIL"
+print(f"Status: {status}")
+
+print ("\n___Student Results ___)
+print (f"Name: {name}")
+print (f"Total marks: {total})
+print (f"Average: {average:.2f}
 

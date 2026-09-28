@@ -3,26 +3,32 @@ name =input ("Enter the student's name: ).title()
 
 
 def get_valid_marks (subject):
+    while True:
+        try:
   marks = float(input (f" enter {subject} marks: "))
   
   while marks < 0 or marks > 100:
-      print ("invalid marks!! enter a value between 0 and 100")
+      print ("invalid marks!! enter a value between 0 and 100)
+        except Value error:
+           print ("please enter a number")
       marks = float( input(f"enter {subject} marks: ")) 
       return marks
 
+while True:
+    subject_name = input ("enter subject name (or type 'done' to finish: ").title()
+    if subject_name == 'Done':
+       break
+     marks= 
+   get_valid_marks ( subject_name)
+       subjects[subject_name]= marks
+    
 
-Physics= get_valid_ marks("physics")
 
-Chemistry= get_ valid_ marks(" chemistry ")
-Biology= get_valid_ marks("Biology")
-
-subjects =[Physics, Chemistry, Biology]
-# subject.append()
-
-total= 0 
-for subject in subjects:
-   total+= subject 
+total= sum(subjects.values())
 average = subject/len (subjects)
+print("\n___STUDENT MARKS")
+for subject,marks in student.items():
+  print (f"{subject} : {marks}")
 
 if average >= 80:
    grade= A
@@ -45,4 +51,5 @@ print ("\n___Student Results ___)
 print (f"Name: {name}")
 print (f"Total marks: {total})
 print (f"Average: {average:.2f}
+
 

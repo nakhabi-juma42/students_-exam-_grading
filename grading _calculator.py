@@ -28,11 +28,6 @@ if not subjects:
 else: 
     total= sum(subjects.values())
     average = subject/len (subjects)
-print("\n" + "=" * 35)
-print(". STUDENT RESULTS")
-print("=" * 35)
-for subject,marks in student.items():
-  print (f"{subject} : {marks}")
 
 if average >= 80:
    grade= A
@@ -45,17 +40,32 @@ elif average >= 50:
 else:
    grade= E 
 
+print("\n" + "=" * 35)
+print(". STUDENT RESULTS")
+print("=" * 35)
+
 if average >= 50:
     status= "PASS"
 else:
     status= "FAIL"
 
+print (f"Name: {name}")
 
 print ("\n___Student Results ___)
-print (f"Name: {name}")
+for subject,marks in student.items():
+  print (f"{subject} : {marks}")
+
 print (f"Total marks: {total})
 print (f"Average: {average:.2f}
 print (f"Grade:{grade})
 print (f"Status: {status}")
 
 print("=" * 35)
+
+while True:
+    analyze_student()
+    again= input ("\n analyze another student?( yes/ no): ").lower()
+
+    if again!= "yes"
+       print ("Thank you for using students performance analyzer!")
+       break 

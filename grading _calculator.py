@@ -1,5 +1,4 @@
 print("student analyzer calculator")
-name =input ("Enter the student's name: ).title()
 
 
 def get_valid_marks (subject):
@@ -7,13 +6,15 @@ def get_valid_marks (subject):
         try:
   marks = float(input (f" enter {subject} marks: "))
   
-  while marks < 0 or marks > 100:
-      print ("invalid marks!! enter a value between 0 and 100)
+          if 0 >= marks <= 100:
+             return marks 
+          else:
+             print ("invalid marks!! enter a value between 0 and 100)
         except Value error:
            print ("please enter a number")
       marks = float( input(f"enter {subject} marks: ")) 
       return marks
-subject={}
+subjects={}
 while True:
     subject_name = input ("enter subject name (or type 'done' to finish: ").title()
     if subject_name == 'Done':
@@ -51,13 +52,13 @@ else:
 
 print (f"Name: {name}")
 
-print ("\n___Student Results ___)
+print ("\n___Student Results ___")
 for subject,marks in student.items():
   print (f"{subject} : {marks}")
 
-print (f"Total marks: {total})
-print (f"Average: {average:.2f}
-print (f"Grade:{grade})
+print (f"Total marks: {total}")
+print (f"Average: {average:.2f}")
+print (f"Grade:{grade}")
 print (f"Status: {status}")
 
 print("=" * 35)
@@ -66,6 +67,6 @@ while True:
     analyze_student()
     again= input ("\n analyze another student?( yes/ no): ").lower()
 
-    if again!= "yes"
+    if again != "yes":
        print ("Thank you for using students performance analyzer!")
        break 

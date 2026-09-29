@@ -1,26 +1,24 @@
-print("student analyzer calculator")
+
 
 
 def get_valid_marks (subject):
     while True:
         try:
-  marks = float(input (f" enter {subject} marks: "))
+           marks = float(input (f" enter {subject} marks: "))
   
-          if 0 >= marks <= 100:
+           if 0 >= marks <= 100:
              return marks 
-          else:
+           else:
              print ("invalid marks!! enter a value between 0 and 100)
         except ValueError:
            print ("please enter a number")
-      marks = float( input(f"enter {subject} marks: ")) 
-      return marks
+      
 subjects={}
 while True:
     subject_name = input ("enter subject name (or type 'done' to finish: ").title()
     if subject_name == 'Done':
        break
-     marks= 
-   get_valid_marks ( subject_name)
+    marks= get_valid_marks ( subject_name)
        subjects[subject_name]= marks
     
 

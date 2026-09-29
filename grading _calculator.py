@@ -2,11 +2,12 @@
 
 
 def get_valid_marks (subject):
+    name = input( "Enter the student's name: ")
     while True:
         try:
            marks = float(input (f" enter {subject} marks: "))
   
-           if 0 >= marks <= 100:
+           if 0 <= marks <= 100:
              return marks 
            else:
              print ("invalid marks!! enter a value between 0 and 100")
@@ -29,15 +30,15 @@ else:
     average = subject/len (subjects)
 
 if average >= 80:
-   grade= A
+   grade= "A"
 elif average >= 70:
-   grade= B
+   grade= "B"
 elif average >= 60:
-   grade= C
+   grade= "C"
 elif average >= 50: 
-   grade= D
+   grade= "D"
 else:
-   grade= E 
+   grade= "E"
 
 print("\n" + "=" * 35)
 print("  STUDENT RESULTS")

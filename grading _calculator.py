@@ -2,7 +2,7 @@
 
 
 def get_valid_marks (subject):
-    name = input( "Enter the student's name: ")
+    name = input( "Enter the student's name: "). title()
     while True:
         try:
            marks = float(input (f" enter {subject} marks: "))
@@ -27,7 +27,7 @@ if not subjects:
    print("no subject was entered ")
 else: 
     total= sum(subjects.values())
-    average = subject/len (subjects)
+    average = total/len (subjects)
 
 if average >= 80:
    grade= "A"
@@ -62,10 +62,11 @@ print (f"Status: {status}")
 
 print("=" * 35)
 
-while True:
-    analyze_student()
-    again= input ("\n analyze another student?( yes/ no): ").lower()
+#while True:
+    #analyze_student()
+    #again= input ("\n analyze another student?( yes/ no): ").lower()
 
-    if again != "yes":
-       print ("Thank you for using students performance analyzer!")
+    #if again != "yes":
+print ("Thank you for using students performance analyzer!")
        break 
+ 

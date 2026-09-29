@@ -10,7 +10,7 @@ def get_valid_marks (subject):
              return marks 
           else:
              print ("invalid marks!! enter a value between 0 and 100)
-        except Value error:
+        except ValueError:
            print ("please enter a number")
       marks = float( input(f"enter {subject} marks: ")) 
       return marks

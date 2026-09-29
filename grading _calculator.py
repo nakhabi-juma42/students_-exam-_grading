@@ -19,7 +19,7 @@ while True:
     if subject_name == 'Done':
        break
     marks= get_valid_marks ( subject_name)
-       subjects[subject_name]= marks
+    subjects[subject_name]= marks
     
 
 if not subjects:

@@ -9,7 +9,7 @@ def get_valid_marks (subject):
            if 0 >= marks <= 100:
              return marks 
            else:
-             print ("invalid marks!! enter a value between 0 and 100)
+             print ("invalid marks!! enter a value between 0 and 100")
         except ValueError:
            print ("please enter a number")
       

@@ -2,8 +2,7 @@
 
 
 def get_valid_marks (subject):
-    
-    while True:
+  while True:
         try:
            marks = float(input (f" enter {subject} marks: "))
   
@@ -12,21 +11,23 @@ def get_valid_marks (subject):
            else:
              print ("invalid marks!! enter a value between 0 and 100")
         except ValueError:
-           print ("please enter a number")
-      
-name = input( "Enter the student's name: "). title()
+             print ("please enter a number")
+def analyze_student:    
+  name = input( "Enter the student's name: ").title()
 subjects={}
-while True:
-    subject_name = input ("enter subject name (or type 'done' to finish: ").title()
+  while True:
+    subject_name = input ("enter subject name (or type 'done' to finish: ").strip().title()
     if subject_name == 'Done':
        break
-    marks= get_valid_marks ( subject_name)
+    if not subject_name:
+       print("subject cannot be empty,please enter subject's name")
+       continue 
+    if subject in subject_name:
+       print ("You have already entered the subject,please enter another subject ")
+       continue 
+   marks= get_valid_marks ( subject_name)
     subjects[subject_name]= marks
     
-
-if not subjects:
-   print("no subject was entered ")
-else: 
    total= sum(subjects.values())
    average = total/len (subjects)
 
@@ -41,33 +42,33 @@ else:
    else:
       grade= "E"
 
-print("\n" + "=" * 35)
-print("  STUDENT RESULTS")
-print("=" * 35)
+   print("\n" + "=" * 35)
+   print("  STUDENT RESULTS")
+   print("=" * 35)
 
-if average >= 50:
+   if average >= 50:
     status= "PASS"
-else:
+   else:
     status= "FAIL"
 
-print (f"Name: {name}")
+   print (f"Name: {name}")
 
-print ("\n___Student Results ___")
-for subject,marks in subjects.items():
-  print (f"{subject} : {marks}")
+   print ("\n___Student Results ___")
+   for subject,marks in subjects.items():
+   print (f"{subject} : {marks}")
 
-print (f"Total marks: {total}")
-print (f"Average: {average:.2f}")
-print (f"Grade:{grade}")
-print (f"Status: {status}")
+   print (f"Total marks: {total}")
+   print (f"Average: {average:.2f}")
+   print (f"Grade:{grade}")
+   print (f"Status: {status}")
 
-print("=" * 35)
+   print("=" * 35)
+ 
+while True:
+   analyze_student()
+   again= input ("\n analyze another student?( yes/ no): ").lower()
 
-#while True:
-    #analyze_student()
-    #again= input ("\n analyze another student?( yes/ no): ").lower()
-
-    #if again != "yes":
+   if again != "yes":
 print ("Thank you for using students performance analyzer!")
      #break 
  

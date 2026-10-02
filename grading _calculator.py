@@ -2,7 +2,7 @@
 
 
 def get_valid_marks (subject):
-    name = input( "Enter the student's name: "). title()
+    
     while True:
         try:
            marks = float(input (f" enter {subject} marks: "))
@@ -14,6 +14,7 @@ def get_valid_marks (subject):
         except ValueError:
            print ("please enter a number")
       
+name = input( "Enter the student's name: "). title()
 subjects={}
 while True:
     subject_name = input ("enter subject name (or type 'done' to finish: ").title()
@@ -26,19 +27,19 @@ while True:
 if not subjects:
    print("no subject was entered ")
 else: 
-    total= sum(subjects.values())
-    average = total/len (subjects)
+   total= sum(subjects.values())
+   average = total/len (subjects)
 
-if average >= 80:
-   grade= "A"
-elif average >= 70:
-   grade= "B"
-elif average >= 60:
-   grade= "C"
-elif average >= 50: 
-   grade= "D"
-else:
-   grade= "E"
+   if average >= 80:
+      grade= "A"
+   elif average >= 70:
+      grade= "B"
+   elif average >= 60:
+      grade= "C"
+   elif average >= 50: 
+      grade= "D"
+   else:
+      grade= "E"
 
 print("\n" + "=" * 35)
 print("  STUDENT RESULTS")
@@ -52,7 +53,7 @@ else:
 print (f"Name: {name}")
 
 print ("\n___Student Results ___")
-for subject,marks in student.items():
+for subject,marks in subjects.items():
   print (f"{subject} : {marks}")
 
 print (f"Total marks: {total}")
@@ -68,5 +69,5 @@ print("=" * 35)
 
     #if again != "yes":
 print ("Thank you for using students performance analyzer!")
-       break 
+     #break 
  

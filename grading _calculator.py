@@ -80,12 +80,21 @@ def analyze_student():
   print (f"Performance:{performance}")
     
   print("=" * 35)
- 
+def search_student():
+  search_name = input ("Enter student's search name: ").title()
+  if search_name in students:
+     print(f"n\ result for {search_name}: ")
+     
+     for subject,marks in students[search_name].items():
+         print(f"{students}:{marks})
+     else:
+         print(f"student not found")
+     
 while True:
-   analyze_student()
-   again= input ("\n analyze another student?( yes/ no): ").lower()
+  analyze_student()
+  again= input ("\n analyze another student?( yes/ no): ").lower()
 
-   if again != "yes":
+  if again != "yes":
      print ("Thank you for using students performance analyzer!")
      break 
  
